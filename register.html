@@ -1,0 +1,251 @@
+<html>
+
+<head>
+    <title>Fashion Faith</title>
+    <link rel="icon" href="Screenshot (2).ico">
+    <style>
+        body {
+            background-color: #000;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #121212;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h2 {
+            color: darkkhaki;
+            text-align: center;
+        }
+
+        .field {
+            margin-top: 20px;
+        }
+
+        .input {
+            margin-bottom: 15px;
+        }
+
+        .input input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .input input[type="submit"] {
+            background-color: #000;
+            border-radius: 3rem;
+            border: 5px dashed darkslategray;
+            color: darkkhaki;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .input input[type="submit"]:hover {
+            transform: scale(110%);
+        }
+
+        .main {
+            padding: 10px;
+        }
+
+        .card-and-add-it {
+            display: flex;
+            padding: 0;
+            justify-content: space-around
+                /* border: 1px solid black; */
+        }
+
+        .add-to-card {
+            /* border: 1px solid black; */
+            margin: 1px;
+            flex-basis: 30%;
+            /* display: none; */
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.getElementById('card-on-name');
+            var n_error = document.getElementById('name-error');
+            var name_check = "";
+
+            var number = document.getElementById('card-num');
+            var number_error = document.getElementById('num-error');
+            var number_check = "";
+
+            var expiry = document.getElementById("expiry");
+            var date_error = document.getElementById("date-error");
+            var date_check = "";
+
+            var cvv = document.getElementById("cvv");
+            var cvv_error = document.getElementById("cvv-error");
+            var cvv_check = "";
+
+            var ptm = document.getElementById("ptm");
+            var ptm_error = document.getElementById("ptm-error");
+            var ptm_check = "";
+
+
+            if (name.value == "") {
+                n_error.innerHTML = "Enter name!";
+                n_error.style.color = "red";
+                name_check = false;
+            } else {
+                var n_syntax = /^[a-zA-Z _]{2,30}$/;
+                var match = n_syntax.test(name.value);
+
+                if (match) {
+                    n_error.innerHTML = "";
+                    name_check = true;
+                } else {
+                    n_error.innerHTML = "Please do not enter number! / white space";
+                    n_error.style.color = "red";
+                    name_check = false;
+                }
+            }
+
+            if (number.value == "") {
+                number_error.innerHTML = "Enter E-Mail";
+                number_error.style.color = "red";
+                number_check = false;
+            } else {
+
+                var number_syntax = /^[a-zA-Z0-9]+@([a-zA-Z])+\.+[A-Za-z]+$/;
+                var number_match = number_syntax.test(number.value);
+
+                if (number_match) {
+                    number_error.innerHTML = "";
+                    number_check = true;
+                } else {
+                    number_error.innerHTML = "Please enter a Proper Email ID";
+                    number_error.style.color = "red";
+                    number_check = false;
+                }
+            }
+
+            if (expiry.value == "") {
+                date_error.innerHTML = "Enter a Number!";
+                date_error.style.color = "red";
+                date_check = false;
+            } else {
+                var patten = /^[0-9]{10}$/;
+                var p_match = patten.test(expiry.value);
+
+                if (p_match) {
+                    date_error.innerHTML = "";
+                    date_check = true;
+                } else {
+                    date_error.innerHTML = "Please enter number in proper way!";
+                    date_error.style.color = "red";
+                    date_check = false;
+                }
+            }
+
+            if (cvv.value == "") {
+                cvv_error.innerHTML = "Enter Address";
+                cvv_error.style.color = "red";
+                cvv_check = false;
+            }
+            else {
+                // var cvv_txt = /^[a-zA-Z0-9]$/;
+                pattren = /^[a-zA-Z0-9 -'',.]{5,50}$/;
+                var pt_match = pattren.test(cvv.value);
+
+                if (pt_match) {
+                    cvv_error.innerHTML = "";
+                    cvv_check = true;
+                } else {
+                    cvv_error.innerHTML = "Do not Use special Charcter! ";
+                    cvv_error.style.color = "red";
+                    cvv_check = false;
+                }
+            }
+
+            if (ptm.value == "") {
+                ptm_error.innerHTML = "Enter Paytm Number";
+                ptm_error.style.color = "red";
+                ptm_check = false;
+            }
+            else {
+                var ptm_txt = /^[0-9]{16}$/;
+                if (ptm_txt.test(ptm.value)) {
+                    ptm_error.innerHTML = "";
+                    ptm_check = true;
+                } else {
+                    ptm_error.innerHTML = "Enter Only number! / 16 digits";
+                    ptm_error.style.color = "red";
+                    ptm_check = false;
+                }
+            }
+
+            if (name_check == true && number_check == true && date_check == true && cvv_check == true && ptm_check == true) {
+                return true;
+
+            }
+            else {
+                return false;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+
+    <
+
+    <section class="add-to-card">
+        <form action="men.html" class="card-form" onsubmit="return validateForm()">
+            <div class="header">
+                <h2 style="color: darkkhaki;">About You!</h2>
+            </div>
+            <div class="main">
+                <div class="field">
+                    <div class="input">
+                        <input type="text" name="card-on-name" id="card-on-name" placeholder="Name">
+                        <span class="error" id="name-error"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="card-num" id="card-num" placeholder="E-mail">
+                        <span class="error" id="num-error"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="expiry" id="expiry" placeholder="Mobile Number">
+                        <span class="error" id="date-error"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="cvv" id="cvv" placeholder="address">
+                        <span class="error" id="cvv-error"></span>
+                    </div>
+                    <h2 style="color: darkkhaki;text-align: center;">Payment</h2>
+
+                    <div class="input">
+                        <input type="number" name="ptm" id="ptm" placeholder="xxxx xxxx xxxx xxxx">
+                        <span class="error" id="ptm-error"></span>
+                    </div>
+                    <br><br>
+
+                    <div class="input">
+                        <input type="submit" value="ADD">
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

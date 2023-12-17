@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <title></title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .main1 {
+            height: 50%;
+            width: 50%;
+            margin-left: 36%;
+            background-color: ;
+            margin-top: 12.5%;
+            color: #fff;
+        }
+
+        label {
+            margin-top: 20px;
+            font-size: larger;
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+
+        .divi {
+            margin-top: 50px;
+        }
+
+        input {
+
+            border-bottom: #fff;
+            height: 10%;
+            background-color: transparent;
+            border: 2px double #fff;
+            text-decoration: ;
+            width: 50%;
+            color: #fff;
+        }
+
+        .btn button {
+            height: 40px;
+            width: 50%;
+            border-radius: 40px;
+            margin-left: 100px;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: 600px;
+            margin-top: 20px 0 10px;
+
+        }
+
+        .btn button a {
+            color: black;
+            text-decoration: none;
+
+
+        }
+
+        input {
+            padding: 1%;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script>
+        function valid() {
+            var name = document.getElementById('name').value;
+
+            if (name == "") {
+                document.getElementById('p').innerHTML = "Name Field is Empty.."
+                document.getElementById('p').style.color = "brown"
+            }
+            else {
+                var namec = /^ [a-zA-Z] $/;
+                var name = namec.test(name);
+                {
+                    if (namec) {
+                        document.getElementById('p').innerHTML = "Correct Name . . . ";
+                        document.getElementById('p').style.color = "green";
+                    }
+                    else {
+                        document.getElementById('p').innerHTML = "Incorrect Name . . . ";
+                        document.getElementById('p').style.color = "red"
+
+
+                    }
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <h2 style="color: red;display: inline;margin-left: 48%;margin-top: 50%;font-size:xx-large;">
+        𝕭𝖔𝖔𝖐</h2>
+    <h2 style="display: inline;color: #fff;margin-right: 2%;font-size:xx-large;">
+        𝕹𝖔𝖜</h2>
+    <div class="main1">
+        <div class="divi">
+            <form action="prize.html">
+                <label for="">Name </label>
+                <input id="name" type="text" required placeholder="Enter Your Name" style="margin-left: 23px;">
+                <br><br>
+        </div>
+
+        <div>
+            <label for="">Address</label>
+            <input id="name" type="text-area" required placeholder="Enter your Address" style="margin-left: 10px;">
+            <br><br>
+        </div>
+        <!--`
+            <div>
+                <label for="">E-mail </label>
+                <input type="mail" required placeholder="Enter your E-mail" style="margin-left: 20px;">
+                <br><br>
+            </div>
+
+            <div>
+                <label for="">Passsword </label>
+                <input type="password" required placeholder="Enter your Password" style="margin-left: -10px;" >
+                <br><br>
+            </div>
+
+            <div>
+                <label for="">Due date</label>
+                <input type="date" required style="margin-left: 2px;">
+                <br><br>
+            </div>
+
+            <div>
+                <label for="">End-date</label>
+                <input type="date" required style="margin-left: 2px;">
+                <br><br>
+            </div> -->
+
+        Note : :  <span id="p" style="margin-right: 100px;"></span>
+
+        <div class="btn">
+            <button type="submit" onclick="valid()">Submit</button>
+
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>

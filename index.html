@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Fashion Faith</title>
+    <script>
+        function here() {
+            var a = document.getElementById('namejs').value;
+            localStorage.setItem('textvalue', a);
+            return true;
+        }
+    </script>
+    <style>
+        body {
+            background-color: black;
+            color: #bdb76b;
+        }
+
+        h1 {
+            color: #bdb76b;
+            margin-top: 10%;
+            text-align: center;
+        }
+
+        #namejs {
+            margin-top: 5px;
+            background-color: transparent;
+            color: #fff;;
+        }
+
+        label {
+            margin-left: 42%;
+            margin-top: 5px;
+            
+        }
+
+        .btna {
+            height: 25px;
+            width: 100px;
+            border-radius: 50px;
+            border: 3px dotted gray;
+            background-color: #000;
+            color: #bdb76b;
+            margin-left: 46%;        
+        }
+
+        .btna:hover {
+            transform: scale(130%);
+            border: 3px dotted gray;
+            transition: all 0.30s;
+        }
+        p{
+            margin-left: 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome To Our Website</h1>
+    <form action="home.html" onsubmit="return here()">
+        <label for="">Name : : </label> <input type="text" name="name" id="namejs" required><br><br><br>
+        <span id="err"></span>
+        <input type="submit" value="Come Here" class="btna"><br><br>
+    </form>
+    <p>
+        <b>
+             Make A Statement . . . <br>
+            Your Choice Your Cloths . . . 
+        </b>
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .main {
+            width: 86%;
+            height: 300px;
+            margin-top: 50px;
+            margin-left: 5%;
+            /* border: 5px solid lightgreen; */
+            display: flex;
+        }
+
+        .div1 {
+            flex-basis: 50%;
+            margin-left: 50px;
+            border: 2px solid golden;
+        }
+
+        .div2 {
+            flex-basis: 50%;
+            border: 2px solid golden;
+            margin-left: 20px;
+        }
+
+        .div3 {
+            flex-basis: 47.5%;
+            margin-left: 50px;
+            border: 2px solid golden;
+            /* display: flex; */
+        }
+
+        /* img {
+            height: 292 px;
+            width: 245px;
+            padding: 2px;
+        } */
+
+        .div1 {
+            display: flex;
+        }
+
+        .div2 {
+            display: flex;
+        }
+
+        .div3 {
+            display: flex;
+        }
+
+        img {
+            flex-basis: 30%;
+            height: 290px;
+            padding: 2px;
+            width: 250px;
+        }
+
+        .det {
+            margin-left: 70px;
+        }
+
+        input {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+
+        .button {
+            height: 25px;
+            width: 120px;
+            background-color: #121212;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 2px dotted darkslategrey;
+            margin-left: 50px;
+            color: darkkhaki;
+        }
+
+        .button:hover {
+            transform: scale(140%);
+            transition: all 0.60s;
+            border: 2px dotted darkslategrey;
+
+        }
+
+        h1:hover {
+            color: yellowgreen;
+            transition: all 0.30s;
+        }
+
+        h2:hover {
+            color: yellowgreen;
+            transition: all 0.30s;
+        }
+
+
+        .div1:hover {
+            font-size: 20px;
+            transition: 0.60s;
+        }
+
+        .div2:hover {
+            font-size: 20px;
+            transition: 0.60s;
+        }
+
+        .div3:hover {
+            font-size: 20px;
+            transition: 0.60s;
+        }
+        span{
+            margin-top: 2px;
+        }
